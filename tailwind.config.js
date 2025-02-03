@@ -1,13 +1,16 @@
-const { iconsPlugin, getIconCollections } = require('@egoist/tailwindcss-icons');
+const {
+  iconsPlugin,
+  getIconCollections,
+} = require('@egoist/tailwindcss-icons');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ['./dist/**/*.{html,js}'],
   theme: {
     container: {
-      center:true
+      center: true,
     },
-    extend:{
+    extend: {
       animation: {
         'slide-top': 'slide-top .5s cubic-bezier(.57,.14,0,1.07) both',
         'slide-bottom': 'slide-bottom 1s cubic-bezier(.57,.14,0,1.07) both',
@@ -54,7 +57,7 @@ module.exports = {
   },
   plugins: [
     iconsPlugin({
-      collections: getIconCollections(['material-symbols'])
-    })
+      collections: getIconCollections(['material-symbols']),
+    }),
   ],
 };
